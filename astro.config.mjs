@@ -14,7 +14,6 @@ export default defineConfig({
     site: 'https://rory.bio',
     integrations: [mdx(), sitemap(), tailwind(), partytown()],
     markdown: {
-        extendDefaultPlugins: true,
         remarkPlugins: [remarkMath],
         rehypePlugins: [rehypeKatex, [autoNewTabExternalLinks, {
             domain: 'localhost:4321'
