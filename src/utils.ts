@@ -36,5 +36,6 @@ export const getRepositoryDetails = async (repositoryFullname: string) => {
 		}
 	});
 	const response = await repoDetails.json();
+	console.log(response)
 	return response;
 };

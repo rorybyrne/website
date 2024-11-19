@@ -6,15 +6,18 @@ import tailwind from "@astrojs/tailwind";
 import { autoNewTabExternalLinks } from './src/autoNewTabExternalLinks';
 
 import partytown from "@astrojs/partytown";
+import rehypeKatex from 'rehype-katex';
+import remarkMath from 'remark-math';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://devolio.devaradise.com',
-  integrations: [mdx(), sitemap(), tailwind(), partytown()],
-  markdown: {
-    extendDefaultPlugins: true,
-    rehypePlugins: [[autoNewTabExternalLinks, {
-      domain: 'localhost:4321'
-    }]]
-  }
+    site: 'https://rory.bio',
+    integrations: [mdx(), sitemap(), tailwind(), partytown()],
+    markdown: {
+        extendDefaultPlugins: true,
+        remarkPlugins: [remarkMath],
+        rehypePlugins: [rehypeKatex, [autoNewTabExternalLinks, {
+            domain: 'localhost:4321'
+        }]]
+    }
 });
