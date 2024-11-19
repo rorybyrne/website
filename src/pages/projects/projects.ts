@@ -2,11 +2,11 @@ import { getRepositoryDetails } from "../../utils";
 
 export interface Project {
     name: string;
-    demoLink: string;
+    codeLink: string;
     tags?: string[],
     description?: string;
     postLink?: string;
-    demoLinkRel?: string;
+    codeLinkRel?: string;
     [key: string]: any;
 }
 
@@ -14,14 +14,14 @@ export const projects: Project[] = [
     {
         name: 'git-plan',
         description: 'A git extension for writing pre-emptive commit messages.',
-        demoLink: 'https://github.com/rorybyrne/git-plan',
+        codeLink: 'https://github.com/rorybyrne/git-plan',
         tags: ['tool']
     },
     {
         name: 'Sellercraft App',
         description: 'An Ecommerce omnichannel platform in Southeast Asia',
-        demoLink: 'https://sellercraft.co',
-        demoLinkRel: 'nofollow noopener noreferrer',
+        codeLink: 'https://sellercraft.co',
+        codeLinkRel: 'nofollow noopener noreferrer',
         tags: ['ECommerce', 'Saas']
     },
     {
